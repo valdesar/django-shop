@@ -10,7 +10,7 @@ location = lambda x: os.path.join(
 
 DEBUG = env.bool('DEBUG', default=True)
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1'])
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', '91.226.81.122'])
 
 EMAIL_SUBJECT_PREFIX = '[Oscar sandbox] '
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -47,33 +47,13 @@ TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-gb'
+LANGUAGE_CODE = 'ru'
 
 # Includes all languages that have >50% coverage in Transifex
 # Taken from Django's default setting for LANGUAGES
 gettext_noop = lambda s: s
 LANGUAGES = (
-    ('ar', gettext_noop('Arabic')),
-    ('ca', gettext_noop('Catalan')),
-    ('cs', gettext_noop('Czech')),
-    ('da', gettext_noop('Danish')),
-    ('de', gettext_noop('German')),
-    ('en-gb', gettext_noop('British English')),
-    ('el', gettext_noop('Greek')),
-    ('es', gettext_noop('Spanish')),
-    ('fi', gettext_noop('Finnish')),
-    ('fr', gettext_noop('French')),
-    ('it', gettext_noop('Italian')),
-    ('ko', gettext_noop('Korean')),
-    ('nl', gettext_noop('Dutch')),
-    ('pl', gettext_noop('Polish')),
-    ('pt', gettext_noop('Portuguese')),
-    ('pt-br', gettext_noop('Brazilian Portuguese')),
-    ('ro', gettext_noop('Romanian')),
     ('ru', gettext_noop('Russian')),
-    ('sk', gettext_noop('Slovak')),
-    ('uk', gettext_noop('Ukrainian')),
-    ('zh-cn', gettext_noop('Simplified Chinese')),
 )
 
 SITE_ID = 1
